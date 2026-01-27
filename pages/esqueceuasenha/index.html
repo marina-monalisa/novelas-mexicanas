@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../../assets/icon.png" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="left-container">
+        <header id="header-container">
+          <img src="../../assets/icon.png" alt="logo" width="30" height="30" />
+          <h1 id="header-title">Novelas Mexicanas</h1>
+        </header>
+        <main>
+          <div id="subtitle-page">
+            <h2 id="forgot-text">
+              Esqueceu sua senha? <br />
+              Não se preocupe!
+            </h2>
+            <p>Vamos te ajudar a recuperá-la.</p>
+          </div>
+
+          <form onsubmit="alert('Enviado')">
+            <div class="input-container">
+              <label>E-mail:</label>
+              <input
+                class="input-text"
+                type="email"
+                placeholder="Digite seu e-mail"
+                required
+              />
+            </div>
+
+            <div id="subtitle-login"></div>
+            <button id="btn-send" type="submit">Enviar</button>
+          </form>
+        </main>
+        <footer id="footer-container">
+          <a id="link-container" href="../../pages/login/index.html"
+            >Voltar a tela inicial</a
+          >
+        </footer>
+      </div>
+
+      <div id="right-container"></div>
+    </div>
+  </body>
+</html>

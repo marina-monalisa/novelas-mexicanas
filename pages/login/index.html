@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../../assets/icon.png" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="left-container">
+        <header id="header-container">
+          <img src="../../assets/icon.png" alt="logo" width="30" height="30" />
+          <h1 id="header-title">Novelas Mexicanas</h1>
+        </header>
+        <main>
+          <div id="subtitle-page">
+            <h2 id="welcome-text">
+              Oii, <br />
+              Bem-vindo
+            </h2>
+            <p>Espero que esse site te encontre bem!</p>
+          </div>
+
+          <form onsubmit="alert('Enviado')">
+            <div class="input-container">
+              <label>E-mail:</label>
+              <input
+                class="input-text"
+                type="email"
+                placeholder="Digite seu e-mail"
+                required
+              />
+            </div>
+
+            <div class="input-container">
+              <label>Senha:</label>
+              <input
+                class="input-text"
+                type="password"
+                placeholder="Digite sua senha"
+                required
+              />
+            </div>
+
+            <div id="subtitle-login">
+              <div id="checkbox-container">
+                <input type="checkbox" />
+                <label id="remember-label">Lembre-me</label>
+              </div>
+
+              <a
+                id="forgot-password"
+                href="../../pages/esqueceuasenha/index.html"
+                >Esqueci minha senha</a
+              >
+            </div>
+            <button id="btn-sign" type="submit">Entrar</button>
+          </form>
+        </main>
+
+        <footer id="footer-container">
+          Não tem uma conta?
+          <a id="link-container" target="_blank" href="https://www.google.com.br"
+            >Registre-se</a
+          >
+        </footer>
+      </div>
+
+      <div id="right-container"></div>
+    </div>
+  </body>
+</html>
