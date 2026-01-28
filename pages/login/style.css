@@ -3,44 +3,55 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Vend Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal
 }
 
 
 body {
-    background-color: chocolate;
+    background-color: #4d0a4d;
     display: flex;
     justify-content: center;
     /*alinha horizontalmente*/
-    align-items: center;/*alinha verticalmente*/
+    align-items: center;
+    /*alinha verticalmente*/
     height: 100vh;
 }
 
 #container {
-    width: 90vw;/*vw medida responsiva, relativa a largura da tela*/
-    height: 90vh;/*vh medida responsiva, relativa a altura da tela*/
-    border-radius: 8px;/*trabalhamos com px pois é a angulação da borda*/
-    background-color: rgb(255, 245, 232);
-    display: flex;/*define o container como um flexbox*/
-    flex-direction: row;/*alinha os elementos em linha*/
+    width: 90vw;
+    /*vw medida responsiva, relativa a largura da tela*/
+    height: 90vh;
+    /*vh medida responsiva, relativa a altura da tela*/
+    border-radius: 8px;
+    /*trabalhamos com px pois é a angulação da borda*/
+    background-color: rgb(237 222 222);
+    display: flex;
+    /*define o container como um flexbox*/
+    flex-direction: row;
+    /*alinha os elementos em linha*/
     padding: 20px;
 
 }
 
 #left-container {
-    flex: 1;/*ocupa todo o espaço disponível*/
+    flex: 1;
+    /*ocupa todo o espaço disponível*/
     /*height: 100%; por padrão o height do flexbox é 100% do container pai*/
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
+    /*alinha os itens ao centro*/
+    justify-content: space-evenly;
+    /*distribui o espaço igualmente entre os itens*/
 }
 
 #right-container {
-    flex: 1;/*ocupa todo o espaço disponível*/
-    background-image: url('../../assets/mariadobairro.png');/*adiciona a imagem de fundo*/
+    flex: 1;
+    /*ocupa todo o espaço disponível*/
+    background-image: url('../../assets/mariadobairro.png');
+    /*adiciona a imagem de fundo*/
     background-size: cover;
     /*cobre todo o espaço do container*/
     background-position: center;
@@ -49,18 +60,21 @@ body {
     /*não repete a imagem*/
     border-radius: 16px;
     /*trabalhamos com px pois é a angulação da borda*/
+    display: none;
+    /*esconde o container direito*/
 }
 
 #subtitle-login {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 12px;
 }
 
-#header-container{
-display: flex;
-align-items: center;
-gap: 4px;
+#header-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 #header-title {
@@ -71,76 +85,135 @@ gap: 4px;
     margin-bottom: 4rem;
 }
 
-#welcome-text { 
+#welcome-text {
     margin-bottom: 1rem;
 }
 
-.input-container { 
+.input-container {
     display: flex;
     flex-direction: column;
 }
 
 .input-text {
-    margin-top:0.5rem ;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
     height: 2.5rem;
-    border-radius: 4px; /*borda arredondada*/
-    border: 1px solid gray; /*borda cinza*/
-    padding-left: 8px; /*espaçamento interno*/
+    border-radius: 4px;
+    /*borda arredondada*/
+    border: 1px solid gray;
+    /*borda cinza*/
+    padding-left: 8px;
+    /*espaçamento interno*/
 }
 
-main{ /*estiliza o main*/
-    width: 40%;
+main {
+    /*estiliza o main*/
+    width: 100%;
 }
 
 #checkbox-container {
-    display: flex;/*define o container como um flexbox*/
-    flex-direction: row; /*alinha os elementos em linha*/
+    display: flex;
+    /*define o container como um flexbox*/
+    flex-direction: row;
+    /*alinha os elementos em linha*/
     align-items: center;
-    gap: 6px; /*espaçamento entre os elementos*/
-    white-space: nowrap; /*impede a quebra de linha*/
+    gap: 6px;
+    /*espaçamento entre os elementos*/
+    white-space: nowrap;
+    /*impede a quebra de linha*/
+    font-size: 15px;
+    /*tamanho da fonte*/
 
 }
 
 #forgot-password {
-    color:rgb(90, 90, 90); /*cor do link*/
-    cursor: pointer; /*muda o cursor ao passar o mouse*/
-    text-decoration: none; /*remove o sublinhado*/
-    white-space: nowrap; /*impede a quebra de linha*/
+    color: rgb(90, 90, 90);
+    /*cor do link*/
+    cursor: pointer;
+    /*muda o cursor ao passar o mouse*/
+    text-decoration: none;
+    /*remove o sublinhado*/
+    white-space: nowrap;
+    /*impede a quebra de linha*/
+    font-size: 15px;
+    /*tamanho da fonte*/
+
 }
 
 #remember-label {
-    color:rgb(90, 90, 90); /*cor do link*/
+    color: rgb(90, 90, 90);
+    /*cor do link*/
 }
 
 #btn-sign {
-    margin-top: 2rem; /*espaçamento superior do botão*/
-    height: 3rem; /*altura do botão*/
-    width: 8rem /*largura do botão*/;
-    border-radius: 8px; /*borda arredondada*/
-    border: solid 1px gray; /*borda cinza*/
-    background-color:rgb(243, 146, 77); /*cor de fundo do botão*/       
-    color: white; /*cor do texto do botão*/
-    font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
+    margin-top: 2rem;
+    /*espaçamento superior do botão*/
+    height: 3rem;
+    /*altura do botão*/
+    width: 8rem
+        /*largura do botão*/
+    ;
+    border-radius: 8px;
+    /*borda arredondada*/
+    border: solid 1px gray;
+    /*borda cinza*/
+    background-color: rgb(219 58 91);
+    /*cor de fundo do botão*/
+    color: white;
+    /*cor do texto do botão*/
+    font-weight: 600;
+    /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
 }
 
 #footer-container {
-    color:rgb(90, 90, 90); /*cor do texto*/
+    color: rgb(90, 90, 90);
+    /*cor do texto*/
 }
 
 #link-container {
-    color:rgb(90, 90, 90); /*cor do link*/
-    cursor: pointer; /*muda o cursor ao passar o mouse*/
-    text-decoration: none; /*remove o sublinhado*/
-    white-space: nowrap; /*impede a quebra de linha*/
-    font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
+    color: rgb(90, 90, 90);
+    /*cor do link*/
+    cursor: pointer;
+    /*muda o cursor ao passar o mouse*/
+    text-decoration: none;
+    /*remove o sublinhado*/
+    white-space: nowrap;
+    /*impede a quebra de linha*/
+    font-weight: 600;
+    /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
 }
 
-/* input {  estilizaria todos os inputs
-    margin-top:0.5rem ;
-    margin-bottom: 1rem;
-    height: 3rem;
-    border-radius: 4px; 
-    border: 1px solid gray; 
-    padding-left: 8px; 
-} */
+@media(min-width:600px) {
+    #right-container {
+        flex: 1;
+        /*ocupa todo o espaço disponível*/
+        background-image: url('../../assets/mariadobairro.png');
+        /*adiciona a imagem de fundo*/
+        background-size: cover;
+        /*cobre todo o espaço do container*/
+        background-position: center;
+        /*centraliza a imagem*/
+        background-repeat: no-repeat;
+        /*não repete a imagem*/
+        border-radius: 16px;
+        /*trabalhamos com px pois é a angulação da borda*/
+        display: block;
+    }
+    #left-container {
+        flex: 1;
+        /*ocupa todo o espaço disponível*/
+        /*height: 100%; por padrão o height do flexbox é 100% do container pai*/
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /*alinha os itens ao centro*/
+        justify-content: space-around;
+        /*distribui o espaço igualmente entre os itens*/
+    }
+
+    main {
+        /*estiliza o main (lembrando que main é uma tag, chamamos ela sem nenhum caractere na frente*/
+        width: 40%;
+    }
+}
+

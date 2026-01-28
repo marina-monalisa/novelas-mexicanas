@@ -10,7 +10,7 @@
 
 
 body {
-    background-color: chocolate;
+    background-color: #4d0a4d;
     display: flex;
     justify-content: center;
     /*alinha horizontalmente*/
@@ -22,7 +22,7 @@ body {
     width: 90vw;/*vw medida responsiva, relativa a largura da tela*/
     height: 90vh;/*vh medida responsiva, relativa a altura da tela*/
     border-radius: 8px;/*trabalhamos com px pois é a angulação da borda*/
-    background-color: rgb(255, 245, 232);
+    background-color: rgb(237 222 222);
     display: flex;/*define o container como um flexbox*/
     flex-direction: row;/*alinha os elementos em linha*/
     padding: 20px;
@@ -34,8 +34,8 @@ body {
     /*height: 100%; por padrão o height do flexbox é 100% do container pai*/
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;/*distribui o espaço igualmente entre os itens*/
 }
 
 #right-container {
@@ -49,6 +49,7 @@ body {
     /*não repete a imagem*/
     border-radius: 16px;
     /*trabalhamos com px pois é a angulação da borda*/
+    display:none; /*esconde o container direito*/
 }
 
 #subtitle-login {
@@ -90,7 +91,7 @@ gap: 4px;
 }
 
 main{ /*estiliza o main*/
-    width: 40%;
+    width: 80%;
 }
 
 #btn-send {
@@ -99,9 +100,14 @@ main{ /*estiliza o main*/
     width: 8rem /*largura do botão*/;
     border-radius: 8px; /*borda arredondada*/
     border: solid 1px gray; /*borda cinza*/
-    background-color:rgb(243, 146, 77); /*cor de fundo do botão*/       
+    background-color:rgb(219 58 91); /*cor de fundo do botão*/       
     color: white; /*cor do texto do botão*/
     font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
+}
+
+#button-container{
+    display: flex;
+    justify-content: center;
 }
 
 #footer-container {
@@ -114,4 +120,38 @@ main{ /*estiliza o main*/
     text-decoration: none; /*remove o sublinhado*/
     white-space: nowrap; /*impede a quebra de linha*/
     font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
+}
+
+@media (min-width:600px) {#right-container
+     {
+    flex: 1;/*ocupa todo o espaço disponível*/
+    background-image: url(../../assets/mariadobairro.png);/*adiciona a imagem de fundo*/
+    background-size: cover;
+    /*cobre todo o espaço do container*/
+    background-position: center;
+    /*centraliza a imagem*/
+    background-repeat: no-repeat;
+    /*não repete a imagem*/
+    border-radius: 16px;
+    /*trabalhamos com px pois é a angulação da borda*/
+    display:block; /*mostra o container direito*/
+}
+
+#left-container {
+    flex: 1;/*ocupa todo o espaço disponível*/
+    /*height: 100%; por padrão o height do flexbox é 100% do container pai*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+main{ /*estiliza o main*/
+    width: 40%;
+}
+
+#button-container{
+    display: flex;
+    justify-content: flex-start;
+}
 }

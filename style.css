@@ -10,7 +10,7 @@
 
 
 body {
-    background-color: chocolate;
+    background-color: #4d0a4d;
     display: flex;
     justify-content: center;
     /*alinha horizontalmente*/
@@ -39,7 +39,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     padding: 0;
-
 }
 
 #background-style {
@@ -52,23 +51,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    
 }
-
-/*#center-container {
-    flex: 4;
-    /*ocupa todo o espaço disponível*/
-    /*height: 100%; por padrão o height do flexbox é 100% do container pai
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}*/
 
 #subtitle-login {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap:12px;
 }
 
 #header-container {
@@ -78,7 +67,7 @@ body {
 }
 
 #header-title {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #subtitle-page {
@@ -108,9 +97,7 @@ body {
 }
 
 main {
-    /*estiliza o main*/
-    width: 40%;
-    /*largura do main*/
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,7 +123,7 @@ main {
     /*altura do botão*/
     border-radius: 8px;
     /*borda arredondada*/
-    background-color: rgb(243, 146, 77);
+    background-color: rgb(219 58 91);
     /*cor de fundo do botão*/
     color: white;
     /*cor do texto do botão*/
@@ -167,4 +154,21 @@ main {
     /*impede a quebra de linha*/
     font-weight: 600;
     /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
+}
+
+#logo-id{
+    width:35px;
+    height:35px;
+}
+
+@media(min-width:600px){#logo-id
+    {
+        width:50px;
+        height:50px;
+    }
+
+    #header-title {
+    font-size: 40px;
+}
+
 }
