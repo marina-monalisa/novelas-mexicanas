@@ -1,0 +1,110 @@
+* {
+    margin: 0; /* Reset de margin e padding */
+    padding: 0; /* Reset de margin e padding */
+    box-sizing: border-box; /* Define o box-sizing para border-box */
+    font-family: "Vend Sans", sans-serif; /* Define a fonte padrão */
+    font-optical-sizing: auto; /* Habilita o ajuste óptico da fonte */
+    font-weight: weight; /* Define o peso da fonte */
+    font-style: normal /* Define o estilo da fonte */
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  background-color: #f4f4f4; /* Cor de fundo */
+}
+
+/* HEADER FIXO */
+.header {
+  position: fixed; /* Fixa o header no topo */
+  top: 0; /* Posiciona no topo */
+  width: 100%; /* Largura total */
+  min-height: 60px; /*  Altura mínima */
+  background-color: #7a1f2b; /* Cor de fundo */
+  color: white; /* Cor do texto */  
+
+  display: flex; /* Usa flexbox */
+  align-items: center; /*Alinha verticalmente ao centro */
+  justify-content: center; /*  Alinha horizontalmente ao centro */  
+
+  padding: 12px 48px; /* Espaçamento interno */
+  z-index: 10; /* Garante que o header fique acima de outros elementos */   
+}
+
+.menu-btn {
+  position: absolute; /* Posiciona o botão de menu */
+  right: 16px; /* Alinha à direita */
+
+  background: none; /* Fundo transparente */
+  padding: 0; /*    Remove o padding */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
+}
+
+.header h1 {
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  text-align: center; /*    Centraliza o texto */
+  line-height: 1.2; /* Altura da linha */
+  margin: 0; /* Remove a margem */ 
+}
+
+/* MAIN */
+.container {
+  padding: 80px 16px 20px; /* Espaçamento interno, considerando o header fixo */
+}
+
+/* CARD */
+.card {
+  background-color: white; 
+  border-radius: 12px;
+  margin-bottom: 20px; /*   Espaçamento entre os cards */
+  overflow: hidden; /*  Esconde o conteúdo que ultrapassa os limites */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra para dar profundidade */
+}
+
+.card img {
+  width: 100%; /*   Largura total da imagem */
+  height: 180px; /* Altura fixa */
+  object-fit: cover; /* Cobre o espaço sem distorcer */
+}
+
+.card-content {
+  padding: 16px; /* Espaçamento interno */
+}
+
+.card-content h2 {
+  font-size: 18px; /*   Tamanho da fonte */
+  margin-bottom: 8px; /* Espaçamento abaixo do título */
+}
+
+.card-content p {
+  font-size: 14px; /* Tamanho da fonte */
+  color: #555; /*   Cor do texto */
+  margin-bottom: 10px; /* Espaçamento abaixo do parágrafo */
+}
+
+.info {
+  display: block; /* Exibe como bloco */
+  font-size: 12px; /* Tamanho da fonte */
+  color: #777; /* Cor do texto */
+  margin-bottom: 12px; /* Espaçamento abaixo da informação */
+}
+
+button {
+  width: 100%; /* Largura total */
+  padding: 10px; /* Espaçamento interno */
+  background-color: #7a1f2b; 
+  color: white;
+  border: none; /* Sem borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-weight: bold; /* Negrito */
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1c1c1c;
+  color: #ccc;
+  text-align: center;
+  padding: 16px;
+  margin-top: 20px;
+}

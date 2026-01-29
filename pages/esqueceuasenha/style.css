@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Vend Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal
@@ -22,7 +22,7 @@ body {
     width: 90vw;/*vw medida responsiva, relativa a largura da tela*/
     height: 90vh;/*vh medida responsiva, relativa a altura da tela*/
     border-radius: 8px;/*trabalhamos com px pois é a angulação da borda*/
-    background-color: rgb(237 222 222);
+    background-color: rgb(241 241 241);
     display: flex;/*define o container como um flexbox*/
     flex-direction: row;/*alinha os elementos em linha*/
     padding: 20px;
@@ -91,7 +91,7 @@ gap: 4px;
 }
 
 main{ /*estiliza o main*/
-    width: 80%;
+    width: 100%;
 }
 
 #btn-send {
@@ -120,6 +120,11 @@ main{ /*estiliza o main*/
     text-decoration: none; /*remove o sublinhado*/
     white-space: nowrap; /*impede a quebra de linha*/
     font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
+}
+
+#logo-id{
+    width:35px;
+    height:35px;
 }
 
 @media (min-width:600px) {#right-container
@@ -153,5 +158,14 @@ main{ /*estiliza o main*/
 #button-container{
     display: flex;
     justify-content: flex-start;
+}
+
+#logo-id{
+    width:40px;
+    height:40px;
+}
+
+ #header-title {
+    font-size: 35px;
 }
 }

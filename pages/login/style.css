@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Vend Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal
@@ -26,13 +26,13 @@ body {
     /*vh medida responsiva, relativa a altura da tela*/
     border-radius: 8px;
     /*trabalhamos com px pois é a angulação da borda*/
-    background-color: rgb(237 222 222);
+    background-color: rgb(241 241 241);
     display: flex;
     /*define o container como um flexbox*/
     flex-direction: row;
     /*alinha os elementos em linha*/
     padding: 20px;
-
+   
 }
 
 #left-container {
@@ -45,12 +45,13 @@ body {
     /*alinha os itens ao centro*/
     justify-content: space-evenly;
     /*distribui o espaço igualmente entre os itens*/
+    
 }
 
 #right-container {
     flex: 1;
     /*ocupa todo o espaço disponível*/
-    background-image: url('../../assets/mariadobairro.png');
+    background-image: url('../../assets/inicial.jpg');
     /*adiciona a imagem de fundo*/
     background-size: cover;
     /*cobre todo o espaço do container*/
@@ -183,12 +184,15 @@ main {
     /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
 }
 
+#logo-id{
+    width:20px;
+    height:20px;
+}
+
 @media(min-width:600px) {
     #right-container {
         flex: 1;
         /*ocupa todo o espaço disponível*/
-        background-image: url('../../assets/mariadobairro.png');
-        /*adiciona a imagem de fundo*/
         background-size: cover;
         /*cobre todo o espaço do container*/
         background-position: center;
@@ -197,7 +201,8 @@ main {
         /*não repete a imagem*/
         border-radius: 16px;
         /*trabalhamos com px pois é a angulação da borda*/
-        display: block;
+        display: block; /*mostra o container direito*/
+        /*não colocar a imagem de fundo aqui, para não travar ao tentar trocar a imagem padrão no código acima*/
     }
     #left-container {
         flex: 1;
@@ -215,5 +220,15 @@ main {
         /*estiliza o main (lembrando que main é uma tag, chamamos ela sem nenhum caractere na frente*/
         width: 40%;
     }
+
+    #header-title {
+    font-size: 35px;
+}
+
+
+#logo-id{
+    width:40px;
+    height:40px;
+}
 }
 
