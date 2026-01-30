@@ -82,7 +82,6 @@ main {
 
 .card img {
   width: 100%; /*   Largura total da imagem */
-  height: 450px; /* Altura fixa */
   object-fit: cover; /* Cobre o espaço sem distorcer */
 }
 
