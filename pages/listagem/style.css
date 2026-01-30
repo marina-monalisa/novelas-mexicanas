@@ -2,16 +2,17 @@
     margin: 0; /* Reset de margin e padding */
     padding: 0; /* Reset de margin e padding */
     box-sizing: border-box; /* Define o box-sizing para border-box */
-    font-family: "Vend Sans", sans-serif; /* Define a fonte padrão */
-    font-optical-sizing: auto; /* Habilita o ajuste óptico da fonte */
-    font-weight: weight; /* Define o peso da fonte */
-    font-style: normal /* Define o estilo da fonte */
+    font-family: "Montserrat", sans-serif; /* Define a fonte padrão */
 }
 
 /* BODY */
 body {
-  font-family: Arial, sans-serif; /* Fonte padrão */
-  background-color: #f4f4f4; /* Cor de fundo */
+  background-color:rgb(233, 233, 233); /* Cor de fundo */
+  min-height: 100vh; /* Altura mínima */
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Direção da coluna */
+  justify-content: space-between; /* Justifica itens ao início */
+
 }
 
 /* HEADER FIXO */
@@ -19,36 +20,52 @@ body {
   position: fixed; /* Fixa o header no topo */
   top: 0; /* Posiciona no topo */
   width: 100%; /* Largura total */
-  min-height: 60px; /*  Altura mínima */
-  background-color: #7a1f2b; /* Cor de fundo */
+  min-height: 70px; /*  Altura mínima */
+  background-color: #4d0a4d; /* Cor de fundo */
   color: white; /* Cor do texto */  
 
   display: flex; /* Usa flexbox */
   align-items: center; /*Alinha verticalmente ao centro */
-  justify-content: center; /*  Alinha horizontalmente ao centro */  
+  justify-content: space-between;  
 
-  padding: 12px 48px; /* Espaçamento interno */
+  gap: 16px; /* espaço entre botão e texto */
+  padding: 12px 50px; /* espaço lateral consistente */
   z-index: 10; /* Garante que o header fique acima de outros elementos */   
 }
 
 .menu-btn {
-  position: absolute; /* Posiciona o botão de menu */
-  right: 16px; /* Alinha à direita */
-
   background: none; /* Fundo transparente */
-  padding: 0; /*    Remove o padding */
-  cursor: pointer; /* Muda o cursor ao passar por cima */
+  border: none; /* Remove borda padrão */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+
+}
+
+.lista-btn {
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
 }
 
 .header h1 {
-  font-size: 20px; /* Tamanho da fonte */
+  font-size: 20px;
   font-weight: bold; /* Negrito */
-  text-align: center; /*    Centraliza o texto */
-  line-height: 1.2; /* Altura da linha */
-  margin: 0; /* Remove a margem */ 
+  white-space: nowrap; /* Impede quebra de linha */
+}
+
+
+nav{
+  display: none;
 }
 
 /* MAIN */
+
+main {
+  display: flex; /* Usa flexbox */
+  justify-content: space-around; /* Espaça os itens igualmente */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+  
+}
 .container {
   padding: 80px 16px 20px; /* Espaçamento interno, considerando o header fixo */
 }
@@ -60,16 +77,18 @@ body {
   margin-bottom: 20px; /*   Espaçamento entre os cards */
   overflow: hidden; /*  Esconde o conteúdo que ultrapassa os limites */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra para dar profundidade */
+  max-width: 350px; /* Largura máxima do conteúdo */
 }
 
 .card img {
   width: 100%; /*   Largura total da imagem */
-  height: 180px; /* Altura fixa */
+  height: 450px; /* Altura fixa */
   object-fit: cover; /* Cobre o espaço sem distorcer */
 }
 
 .card-content {
   padding: 16px; /* Espaçamento interno */
+  background-color:floralwhite;
 }
 
 .card-content h2 {
@@ -79,32 +98,62 @@ body {
 
 .card-content p {
   font-size: 14px; /* Tamanho da fonte */
-  color: #555; /*   Cor do texto */
+  color: grey; /*   Cor do texto */
   margin-bottom: 10px; /* Espaçamento abaixo do parágrafo */
 }
 
 .info {
   display: block; /* Exibe como bloco */
   font-size: 12px; /* Tamanho da fonte */
-  color: #777; /* Cor do texto */
+  color:grey; /* Cor do texto */
   margin-bottom: 12px; /* Espaçamento abaixo da informação */
 }
 
-button {
-  width: 100%; /* Largura total */
-  padding: 10px; /* Espaçamento interno */
-  background-color: #7a1f2b; 
+/* PREÇO + BOTÃO */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(219 58 91);
+}
+
+.buy-btn {
+  padding: 8px 16px;
+  background-color: rgb(219 58 91);
   color: white;
-  border: none; /* Sem borda */
-  border-radius: 8px; /* Bordas arredondadas */
-  font-weight: bold; /* Negrito */
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* FOOTER */
 .footer {
-  background-color: #1c1c1c;
-  color: #ccc;
+  background-color: #4d0a4d;
+  color: white;
   text-align: center;
   padding: 16px;
   margin-top: 20px;
+  font-size: 12px;
+  max-height: 100px;
+}
+
+@media(min-width: 600px) {
+  
+  .menu-btn{
+    display: none; /* Oculta o botão do menu em telas maiores */
+    
+  }
+
+ .nav {
+    display: flex; /* Exibe o menu de navegação */
+    gap: 24px; /* separa Sobre e Sair */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
 }
