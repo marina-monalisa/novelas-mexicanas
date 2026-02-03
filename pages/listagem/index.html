@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Catálogo</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,15 +11,26 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="../../assets/icon.png" />
   </head>
   <body>
     <!-- HEADER FIXO -->
     <header class="header">
-      <h1>Novelas Mexicanas</h1>
+      <div class="brand">
+        <img id="logo-id" src="../../assets/icon.png" alt="logo" />
+        <h1>Novelas Mexicanas</h1>
+      </div>
 
       <button class="menu-btn" aria-label="Abrir menu">
         <img src="../../assets/menu.png" alt="" />
       </button>
+
+<div class="search">
+  <input type="text" placeholder="Pesquisar novela..." />
+  <button class="search-btn" aria-label="Pesquisar">
+  <img src="../../assets/lupa.png" alt="Buscar" />
+  </button>
+</div>
 
       <nav class="nav">
         <a class="lista-btn" href="https://www.google.com.br">Sobre</a>

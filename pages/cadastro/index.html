@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../../assets/icon.png" />
+  </head>
+  <body>
+    <div id="container">
+      <header id="header-container">
+        <img id="logo-id" src="../../assets/icon.png" alt="logo" />
+        <h1 id="header-title">Novelas Mexicanas</h1>
+      </header>
+
+      <main>
+        <div id="subtitle-page">
+          <h2 id="welcome-text">Crie sua conta</h2>
+          <p>Preencha os campos abaixo para se cadastrar.</p>
+        </div>
+
+        <form onsubmit="alert('Cadastro enviado')">
+          <div class="input-container">
+            <label>Nome completo:</label>
+            <input class="input-text" type="text" placeholder="Digite seu nome" required />
+          </div>
+
+          <div class="input-container">
+            <label>E-mail:</label>
+            <input class="input-text" type="email" placeholder="Digite seu e-mail" required />
+          </div>
+
+          <div class="input-container">
+            <label>Celular:</label>
+            <input class="input-text" type="tel" placeholder="(XX) XXXXX-XXXX" required />
+          </div>
+
+          <div class="input-container">
+            <label>Data de nascimento:</label>
+            <input class="input-text" type="date" required />
+          </div>
+
+          <div class="input-container">
+            <label>Senha:</label>
+            <input class="input-text" type="password" placeholder="Digite sua senha" required />
+          </div>
+
+          <div class="input-container">
+            <label>Confirmar senha:</label>
+            <input class="input-text" type="password" placeholder="Confirme sua senha" required />
+          </div>
+
+          <div id="checkbox-container">
+            <input type="checkbox" required />
+            <label>Li e aceito os termos de uso</label>
+          </div>
+
+          <button id="btn-sign" type="submit">Registrar</button>
+        </form>
+      </main>
+
+      <footer id="footer-container">
+        Já tem uma conta?
+        <a id="link-container" href="../../pages/login/index.html">Entrar</a>
+      </footer>
+    </div>
+  </body>
+</html>
+
+

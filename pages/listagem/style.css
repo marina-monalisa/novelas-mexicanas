@@ -16,6 +16,14 @@ body {
 }
 
 /* HEADER FIXO */
+
+/* agrupa logo + título */
+.brand {
+  display: flex; 
+  align-items: center;
+  gap: 10px;       /* espaço entre logo e texto */
+}
+
 .header {
   position: fixed; /* Fixa o header no topo */
   top: 0; /* Posiciona no topo */
@@ -31,6 +39,17 @@ body {
   gap: 16px; /* espaço entre botão e texto */
   padding: 12px 50px; /* espaço lateral consistente */
   z-index: 10; /* Garante que o header fique acima de outros elementos */   
+}
+
+#logo-id{
+    width:35px;
+    height:35px;
+}
+
+/* ===== BUSCA ===== */
+/* 👉 MOBILE: nada de busca */
+.search {
+  display: none;
 }
 
 .menu-btn {
@@ -81,8 +100,11 @@ main {
 }
 
 .card img {
-  width: 100%; /*   Largura total da imagem */
-  object-fit: cover; /* Cobre o espaço sem distorcer */
+  width: 100%;
+  height: 500px;          /* altura padrão de poster */
+  object-fit: cover;      /* corta sem distorcer */
+  object-position: top;   /* prioriza rosto */
+  display: block;
 }
 
 .card-content {
@@ -155,4 +177,26 @@ main {
     gap: 24px; /* separa Sobre e Sair */
     align-items: center; /* Alinha verticalmente ao centro */
   }
+
+
+  /* 👉 faz a busca voltar a existir no desktop */
+  .search {
+    display: flex;
+    align-items: center;
+  }
+
+  .search input {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none; 
+    font-size: 14px; 
+    width: 380px;
+  }
+
+  .search-btn {
+    display: none;
+  }
 }
+
