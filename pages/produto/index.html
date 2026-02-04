@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produto</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="icon" type="image/png" href="../../assets/icon.png" />
+</head>
+
+<body>
+
+<!-- ===== HEADER IGUAL AO CATÁLOGO ===== -->
+<header class="header">
+
+  <div class="brand">
+    <img id="logo-id" src="../../assets/icon.png" alt="logo" />
+    <h1>Novelas Mexicanas</h1>
+  </div>
+
+  <!-- BUSCA (só aparece no desktop) -->
+  <div class="search">
+    <input type="text" placeholder="Pesquisar novela..." />
+  </div>
+
+  <!-- AÇÕES MOBILE -->
+  <div class="acoes-mobile">
+
+    <!-- VOLTAR SÓ NO MOBILE -->
+    <a href="../listagem/index.html" class="back-mobile">
+      <img src="../../assets/voltar.png" alt="Voltar" />
+    </a>
+
+    <button class="menu-btn">
+      <img src="../../assets/menu.png" alt="" />
+    </button>
+
+  </div>
+
+  <!-- NAVEGAÇÃO DESKTOP -->
+  <nav class="nav">
+  <a class="lista-btn" href="../listagem/index.html">Voltar</a>
+  <a class="lista-btn" href="#">Sobre</a>
+  <a class="lista-btn" href="../../index.html">Sair</a>
+</nav>
+
+</header>
+
+<!-- ===== CONTEÚDO PRINCIPAL ===== -->
+<main class="container">
+
+  <section class="detalhe-topo">
+
+    <div class="poster">
+      <img src="../../assets/mdb.jpg" alt="Maria do Bairro" />
+    </div>
+
+    <div class="resumo">
+      <h2>Maria do Bairro</h2>
+
+      <p class="texto">
+        Da pobreza extrema ao amor verdadeiro, Maria enfrenta preconceitos,
+        intrigas e segredos até conquistar seu lugar.
+      </p>
+
+      <span class="info">185 capítulos • 1995</span>
+
+      <div class="acoes">
+        <span class="price">R$ 29,90</span>
+        <button class="buy-btn">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SINOPSE -->
+  <section class="bloco">
+    <h3>Sinopse</h3>
+
+    <p>
+      Maria é uma jovem humilde que vive no lixão da Cidade do México. Após
+      ser acolhida por uma família rica, precisa enfrentar humilhações,
+      diferenças sociais e grandes vilões para viver seu amor com Luís
+      Fernando.
+    </p>
+  </section>
+
+  <!-- FICHA TÉCNICA -->
+  <section class="bloco">
+    <h3>Ficha técnica</h3>
+
+    <ul class="ficha">
+      <li><strong>Gênero:</strong> Drama / Romance</li>
+      <li><strong>Classificação:</strong> 12 anos</li>
+      <li><strong>Emissora:</strong> Televisa</li>
+      <li><strong>Autora:</strong> Inés Rodena</li>
+      <li><strong>Protagonistas:</strong> Thalía e Fernando Colunga</li>
+    </ul>
+  </section>
+
+  <!-- AVALIAÇÕES (pronto para JS futuro) -->
+<section class="bloco">
+  <h3>Deixe sua avaliação</h3>
+
+  <form class="form-avaliar">
+    <input type="text" placeholder="Seu nome" />
+
+    <textarea placeholder="Escreva sua opinião sobre a novela"></textarea>
+
+    <button type="button" class="buy-btn">
+      Enviar avaliação
+    </button>
+  </form>
+
+  <!-- aqui o JS vai inserir as avaliações reais depois -->
+  <div id="lista-avaliacoes"></div>
+</section>
+
+
+  <!-- RECOMENDADOS -->
+  <section class="bloco">
+    <h3>Você também pode gostar</h3>
+
+    <div class="recomendados">
+      <img src="../../assets/marimar.jpg" alt="Marimar" />
+      <img src="../../assets/mariamercedes.jpg" alt="Maria Mercedes" />
+      <img src="../../assets/ausurpadora.jpg" alt="A Usurpadora" />
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>© 2026 Novelas Mexicanas</p>
+</footer>
+
+</body>
+</html>

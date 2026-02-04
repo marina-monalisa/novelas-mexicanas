@@ -1,136 +1,142 @@
 * {
-    margin: 0; /* Reset de margin e padding */
-    padding: 0; /* Reset de margin e padding */
-    box-sizing: border-box; /* Define o box-sizing para border-box */
-    font-family: "Montserrat", sans-serif; /* Define a fonte padrão */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* BODY */
+/* ===== BODY ===== */
 body {
-  background-color:rgb(233, 233, 233); /* Cor de fundo */
-  min-height: 100vh; /* Altura mínima */
-  display: flex; /* Usa flexbox */
-  flex-direction: column; /* Direção da coluna */
-  justify-content: space-between; /* Justifica itens ao início */
+  background-color: rgb(233, 233, 233);
+  min-height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* HEADER FIXO */
+/* ===== HEADER ===== */
 
-/* agrupa logo + título */
 .brand {
-  display: flex; 
+  display: flex;
   align-items: center;
-  gap: 10px;       /* espaço entre logo e texto */
+  gap: 10px;
 }
 
 .header {
-  position: fixed; /* Fixa o header no topo */
-  top: 0; /* Posiciona no topo */
-  width: 100%; /* Largura total */
-  min-height: 70px; /*  Altura mínima */
-  background-color: #4d0a4d; /* Cor de fundo */
-  color: white; /* Cor do texto */  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 70px;
 
-  display: flex; /* Usa flexbox */
-  align-items: center; /*Alinha verticalmente ao centro */
-  justify-content: space-between;  
+  background-color: #4d0a4d;
+  color: white;
 
-  gap: 16px; /* espaço entre botão e texto */
-  padding: 12px 50px; /* espaço lateral consistente */
-  z-index: 10; /* Garante que o header fique acima de outros elementos */   
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+  padding: 12px 50px;
+
+  z-index: 10;
 }
 
-#logo-id{
-    width:35px;
-    height:35px;
-}
-
-/* ===== BUSCA ===== */
-/* 👉 MOBILE: nada de busca */
-.search {
-  display: none;
-}
-
-.menu-btn {
-  background: none; /* Fundo transparente */
-  border: none; /* Remove borda padrão */
-  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-
-}
-
-.lista-btn {
-  color: white; /* Cor do texto */
-  text-decoration: none; /* Remove sublinhado */
-  font-size: 16px; /* Tamanho da fonte */
-  font-weight: bold; /* Negrito */
+#logo-id {
+  width: 35px;
+  height: 35px;
 }
 
 .header h1 {
   font-size: 20px;
-  font-weight: bold; /* Negrito */
-  white-space: nowrap; /* Impede quebra de linha */
+  font-weight: bold;
+  white-space: nowrap;
 }
 
+/* ===== MENU MOBILE ===== */
 
-nav{
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav {
   display: none;
 }
 
-/* MAIN */
-
-main {
-  display: flex; /* Usa flexbox */
-  justify-content: space-around; /* Espaça os itens igualmente */
-  flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
-  
+.lista-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
 }
+
+/* ===== BUSCA ===== */
+
+.search {
+  display: none;
+}
+
+/* ===== MAIN ===== */
+
 .container {
-  padding: 80px 16px 20px; /* Espaçamento interno, considerando o header fixo */
+  padding: 80px 16px 20px;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-/* CARD */
+/* ===== CARD ===== */
+
 .card {
-  background-color: white; 
+  background-color: white;
   border-radius: 12px;
-  margin-bottom: 20px; /*   Espaçamento entre os cards */
-  overflow: hidden; /*  Esconde o conteúdo que ultrapassa os limites */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra para dar profundidade */
-  max-width: 350px; /* Largura máxima do conteúdo */
+
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  max-width: 350px;
 }
 
 .card img {
   width: 100%;
-  height: 500px;          /* altura padrão de poster */
-  object-fit: cover;      /* corta sem distorcer */
-  object-position: top;   /* prioriza rosto */
+  height: 500px;
+
+  object-fit: cover;
+  object-position: top;
+
   display: block;
 }
 
 .card-content {
-  padding: 16px; /* Espaçamento interno */
-  background-color:floralwhite;
+  padding: 16px;
+  background-color: floralwhite;
 }
 
 .card-content h2 {
-  font-size: 18px; /*   Tamanho da fonte */
-  margin-bottom: 8px; /* Espaçamento abaixo do título */
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
 .card-content p {
-  font-size: 14px; /* Tamanho da fonte */
-  color: grey; /*   Cor do texto */
-  margin-bottom: 10px; /* Espaçamento abaixo do parágrafo */
+  font-size: 14px;
+  color: grey;
+  margin-bottom: 10px;
 }
 
 .info {
-  display: block; /* Exibe como bloco */
-  font-size: 12px; /* Tamanho da fonte */
-  color:grey; /* Cor do texto */
-  margin-bottom: 12px; /* Espaçamento abaixo da informação */
+  display: block;
+  font-size: 12px;
+  color: grey;
+  margin-bottom: 12px;
 }
 
-/* PREÇO + BOTÃO */
+/* ===== PREÇO + BOTÃO ===== */
+
 .card-footer {
   display: flex;
   align-items: center;
@@ -141,45 +147,58 @@ main {
 .price {
   font-size: 16px;
   font-weight: 600;
-  color: rgb(219 58 91);
+  color: rgb(219, 58, 91);
 }
 
+/* 👉 botão agora é LINK estilizado */
 .buy-btn {
   padding: 8px 16px;
-  background-color: rgb(219 58 91);
+  background-color: rgb(219, 58, 91);
   color: white;
+
   border: none;
   border-radius: 8px;
+
   font-weight: bold;
   cursor: pointer;
+
+  text-decoration: none;
+  text-align: center;
 }
 
-/* FOOTER */
+.buy-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== FOOTER ===== */
+
 .footer {
   background-color: #4d0a4d;
   color: white;
+
   text-align: center;
   padding: 16px;
+
   margin-top: 20px;
   font-size: 12px;
+
   max-height: 100px;
 }
 
-@media(min-width: 600px) {
-  
-  .menu-btn{
-    display: none; /* Oculta o botão do menu em telas maiores */
-    
+/* ===== DESKTOP ===== */
+
+@media (min-width: 600px) {
+
+  .menu-btn {
+    display: none;
   }
 
- .nav {
-    display: flex; /* Exibe o menu de navegação */
-    gap: 24px; /* separa Sobre e Sair */
-    align-items: center; /* Alinha verticalmente ao centro */
+  .nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
   }
 
-
-  /* 👉 faz a busca voltar a existir no desktop */
   .search {
     display: flex;
     align-items: center;
@@ -187,11 +206,14 @@ main {
 
   .search input {
     display: block;
+
     padding: 6px 10px;
     border-radius: 8px;
+
     border: none;
-    outline: none; 
-    font-size: 14px; 
+    outline: none;
+
+    font-size: 14px;
     width: 380px;
   }
 
