@@ -5,7 +5,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* ===== BODY ===== */
+/* BODY */
 body {
   background-color: rgb(233, 233, 233);
   min-height: 100vh;
@@ -15,7 +15,7 @@ body {
   justify-content: space-between;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 
 .brand {
   display: flex;
@@ -53,7 +53,7 @@ body {
   white-space: nowrap;
 }
 
-/* ===== MENU MOBILE ===== */
+/* MENU MOBILE */
 
 .menu-btn {
   background: none;
@@ -72,13 +72,19 @@ nav {
   font-weight: bold;
 }
 
-/* ===== BUSCA ===== */
+.acoes-mobile{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* BUSCA */
 
 .search {
   display: none;
 }
 
-/* ===== MAIN ===== */
+/* MAIN */
 
 .container {
   padding: 80px 16px 20px;
@@ -88,7 +94,7 @@ nav {
   flex-wrap: wrap;
 }
 
-/* ===== CARD ===== */
+/* CARD */
 
 .card {
   background-color: white;
@@ -99,7 +105,7 @@ nav {
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 
-  max-width: 350px;
+  max-width: 335px;
 }
 
 .card img {
@@ -135,7 +141,7 @@ nav {
   margin-bottom: 12px;
 }
 
-/* ===== PREÇO + BOTÃO ===== */
+/* PREÇO + BOTÃO */
 
 .card-footer {
   display: flex;
@@ -150,7 +156,7 @@ nav {
   color: rgb(219, 58, 91);
 }
 
-/* 👉 botão agora é LINK estilizado */
+/* botão agora é LINK estilizado */
 .buy-btn {
   padding: 8px 16px;
   background-color: rgb(219, 58, 91);
@@ -166,11 +172,13 @@ nav {
   text-align: center;
 }
 
-.buy-btn:hover {
-  opacity: 0.9;
+
+/* Quando o mouse estiver sobre o botão muda de cor */
+.buy-btn:hover {  
+  background-color: rgb(180, 40, 70);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 .footer {
   background-color: #4d0a4d;
@@ -185,9 +193,9 @@ nav {
   max-height: 100px;
 }
 
-/* ===== DESKTOP ===== */
+/* DESKTOP */
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
 
   .menu-btn {
     display: none;
@@ -211,7 +219,7 @@ nav {
     border-radius: 8px;
 
     border: none;
-    outline: none;
+    outline: none; /*remove o contorno de foco de um elemento*/
 
     font-size: 14px;
     width: 380px;
@@ -220,5 +228,6 @@ nav {
   .search-btn {
     display: none;
   }
-}
 
+  .acoes-mobile { display: none; }
+}

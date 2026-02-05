@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Vend Sans", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Montserrat", sans-serif;
     font-weight: weight;
     font-style: normal
 }
@@ -16,7 +15,7 @@ body {
     /*alinha horizontalmente*/
     align-items: center;
     /*alinha verticalmente*/
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #container {
@@ -137,11 +136,13 @@ main {
     /*borda cinza*/
 }
 
-#footer-container {
-    color: rgb(90, 90, 90);
-    /*cor do texto*/
+.btn-enter:hover {
+  background-color: rgb(180, 40, 70);
 }
 
+/*#footer-container {
+    color: rgb(90, 90, 90);
+}*/
 
 #link-container {
     color: rgb(90, 90, 90);

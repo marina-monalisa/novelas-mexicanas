@@ -3,9 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal
+    font-weight: weight;
+    font-style: normal
 }
 
 
@@ -15,7 +14,7 @@ body {
     justify-content: center;
     /*alinha horizontalmente*/
     align-items: center;/*alinha verticalmente*/
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #container {
@@ -103,6 +102,11 @@ main{ /*estiliza o main*/
     background-color:rgb(219 58 91); /*cor de fundo do botão*/       
     color: white; /*cor do texto do botão*/
     font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
+}
+
+/* Quando o mouse estiver sobre o botão muda de cor */
+#btn-send:hover {
+  background-color: rgb(180, 40, 70);
 }
 
 #button-container{
