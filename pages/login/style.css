@@ -78,7 +78,7 @@ body {
 }
 
 #header-title {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #subtitle-page {
@@ -87,6 +87,7 @@ body {
 
 #welcome-text {
     margin-bottom: 1rem;
+    font-size: 22px;
 }
 
 .input-container {
@@ -108,7 +109,7 @@ body {
 
 main {
     /*estiliza o main*/
-    width: 100%;
+    max-width: 360px;
 }
 
 #checkbox-container {
@@ -229,5 +230,7 @@ main {
     width:40px;
     height:40px;
 }
+
+
 }
 

@@ -1,100 +1,98 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Finalizar Compra</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finalizar Compra</title>
 
-  <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
-    rel="stylesheet"
-  />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" type="image/png" href="../../assets/icon.png" />
-</head>
+    <link rel="icon" type="image/png" href="../../assets/icon.png" />
+  </head>
 
-<body>
-
-<!--  HEADER IGUAL AO CATÁLOGO -->
-<header class="header">
-  <div class="brand">
-    <img id="logo-id" src="../../assets/icon.png" alt="logo" />
-    <h1>Novelas Mexicanas</h1>
-  </div>
-
-  <div class="search">
-    <input type="text" placeholder="Pesquisar novela..." />
-  </div>
-
-  <div class="acoes-mobile">
-    <a href="../listagem/index.html" class="back-mobile">
-      <img src="../../assets/voltar.png" alt="Voltar" />
-    </a>
-    <button class="menu-btn">
-      <img src="../../assets/menu.png" alt="Menu" />
-    </button>
-  </div>
-
-  <nav class="nav">
-    <a class="lista-btn" href="../listagem/index.html">Voltar</a>
-    <a class="lista-btn" href="#">Sobre</a>
-    <a class="lista-btn" href="../../index.html">Sair</a>
-  </nav>
-</header>
-
-<!--CONTEÚDO PRINCIPAL -->
-<main class="container">
-
-  <!-- TOPO DO CHECKOUT -->
-  <section class="detalhe-topo">
-    <div class="poster">
-      <img src="../../assets/mdb.jpg" alt="Maria do Bairro" />
-    </div>
-
-    <div class="resumo">
-      <h2>Finalizar Compra</h2>
-      <p class="texto">Confira seus dados e o produto selecionado antes de confirmar.</p>
-
-      <div class="acoes">
-        <span class="price">Total: R$ 49,90</span>
-        <button class="buy-btn">Confirmar Compra</button>
+  <body>
+    <!--  HEADER IGUAL AO CATÁLOGO -->
+    <header class="header">
+      <div class="brand">
+        <img id="logo-id" src="../../assets/icon.png" alt="logo" />
+        <h1>Novelas Mexicanas</h1>
       </div>
-    </div>
-  </section>
 
-  <!-- SEUS DADOS -->
-  <section class="bloco">
-    <h3>Seus Dados</h3>
-    <ul class="ficha">
-      <li><strong>Nome:</strong> Maria do Bairro</li>
-      <li><strong>Email:</strong> maria@exemplo.com</li>
-      <li><strong>Tipo:</strong> Produto Digital</li>
-    </ul>
-  </section>
+      <div class="search">
+        <input type="text" placeholder="Pesquisar novela..." />
+      </div>
 
-  <!-- PRODUTO SELECIONADO -->
-  <section class="bloco">
-    <h3>Produto Selecionado</h3>
-    <ul class="ficha">
-      <li><strong>Produto:</strong> Acesso Online – Maria do Bairro</li>
-      <li><strong>Formato:</strong> Conteúdo Digital</li>
-      <li><strong>Quantidade:</strong> 1</li>
-      <li><strong>Preço:</strong> R$ 29,90</li>
-      <li class="total"><strong>Total:</strong> R$ 29,90</li>
-    </ul>
-  </section>
+      <div class="acoes-mobile">
+        <a href="../listagem/index.html" class="back-mobile">
+          <img src="../../assets/voltar.png" alt="Voltar" />
+        </a>
+        <button class="menu-btn">
+          <img src="../../assets/menu.png" alt="Menu" />
+        </button>
+      </div>
 
-</main>
+      <nav class="nav">
+        <a class="lista-btn" href="../listagem/index.html">Voltar</a>
+        <a class="lista-btn" href="#">Sobre</a>
+        <a class="lista-btn" href="../../index.html">Sair</a>
+      </nav>
+    </header>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <p>Produto digital – acesso liberado por e-mail após confirmação</p>
-  <p>© 2026 Novelas Mexicanas</p>
-</footer>
+    <!--CONTEÚDO PRINCIPAL -->
+    <main class="container">
+      <!-- TOPO DO CHECKOUT -->
+      <section class="detalhe-topo">
+        <div class="poster">
+          <img src="../../assets/mdb.jpg" alt="Maria do Bairro" />
+        </div>
 
-</body>
+        <div class="resumo">
+          <h2>Finalizar Compra</h2>
+          <p class="texto">
+            Confira seus dados e o produto selecionado antes de confirmar.
+          </p>
+
+          <div class="acoes">
+            <span class="price">Total: R$ 49,90</span>
+            <button class="buy-btn">Confirmar Compra</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEUS DADOS -->
+      <section class="bloco">
+        <h3>Seus Dados</h3>
+        <ul class="ficha">
+          <li><strong>Nome:</strong> Maria do Bairro</li>
+          <li><strong>Email:</strong> maria@exemplo.com</li>
+          <li><strong>Tipo:</strong> Produto Digital</li>
+        </ul>
+      </section>
+
+      <!-- PRODUTO SELECIONADO -->
+      <section class="bloco">
+        <h3>Produto Selecionado</h3>
+        <ul class="ficha">
+          <li><strong>Produto:</strong> Acesso Online – Maria do Bairro</li>
+          <li><strong>Formato:</strong> Conteúdo Digital</li>
+          <li><strong>Quantidade:</strong> 1</li>
+          <li><strong>Preço:</strong> R$ 29,90</li>
+          <li class="total"><strong>Total:</strong> R$ 29,90</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Produto digital – acesso liberado por e-mail após confirmação</p>
+      <p>© 2026 Novelas Mexicanas</p>
+    </footer>
+  </body>
 </html>
