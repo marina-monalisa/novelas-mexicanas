@@ -87,6 +87,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  justify-content: center;
 }
 
 .resumo h2 { font-size: 22px; }
@@ -98,6 +99,7 @@ body {
   align-items: center;
   gap: 16px;
   margin-top: 8px;
+  justify-content: space-around;
 }
 
 .price {
@@ -208,5 +210,8 @@ body {
     align-items: flex
   }
 
-  
+  .acoes{
+    justify-content: start;
+  }
+
 }
