@@ -12,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="./assets/icon.png" />
     <link rel="icon" type="image/png" href="../../assets/icon.png" />
   </head>
   <body>
@@ -31,10 +30,11 @@
             <p>Vamos te ajudar a recuperá-la.</p>
           </div>
 
-          <form onsubmit="alert('Enviado')">
+          <!-- <form onsubmit="alert('Enviado')"> -->
             <div class="input-container">
               <label>E-mail:</label>
               <input
+                id="input-email"
                 class="input-text"
                 type="email"
                 placeholder="Digite seu e-mail"
@@ -44,9 +44,9 @@
 
             <div id="subtitle-login"></div>
             <div id="button-container">
-              <button id="btn-send" type="submit">Enviar</button>
+              <button id="btn-send" onclick="mostrarValorDoInput()" >Enviar</button>
             </div>
-          </form>
+          <!-- </form> -->
         </main>
         <footer id="footer-container">
           <a id="link-container" href="../../pages/login/index.html"
@@ -58,4 +58,5 @@
       <div id="right-container"></div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

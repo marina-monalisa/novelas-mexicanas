@@ -26,10 +26,11 @@
             <p>Espero que esse site te encontre bem!</p>
           </div>
 
-          <form onsubmit="alert('Enviado')">
+          <form onsubmit="login(event)">
             <div class="input-container">
               <label>E-mail:</label>
-              <input
+              <input 
+                id = "input-login"
                 class="input-text"
                 type="email"
                 placeholder="Digite seu e-mail"
@@ -39,7 +40,8 @@
 
             <div class="input-container">
               <label>Senha:</label>
-              <input
+              <input 
+                id="input-senha"
                 class="input-text"
                 type="password"
                 placeholder="Digite sua senha"
@@ -76,6 +78,7 @@
       <div id="right-container"></div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
 
 

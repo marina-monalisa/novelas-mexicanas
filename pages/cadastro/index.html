@@ -32,36 +32,36 @@
         <p>Preencha os campos abaixo para se cadastrar.</p>
       </div>
 
-      <form onsubmit="alert('Cadastro enviado')">
+      <!-- <form onsubmit="alert('Cadastro enviado')"> -->
 
         <div class="input-container">
           <label>Nome completo:</label>
-          <input class="input-text" type="text" placeholder="Digite seu nome" required />
+          <input id="input-name" class="input-text" type="text" placeholder="Digite seu nome" required />
         </div>
 
         <div class="input-container">
           <label>E-mail:</label>
-          <input class="input-text" type="email" placeholder="Digite seu e-mail" required />
+          <input id="input-email" class="input-text" type="email" placeholder="Digite seu e-mail" required />
         </div>
 
         <div class="input-container">
           <label>Celular:</label>
-          <input class="input-text" type="tel" placeholder="(XX) XXXXX-XXXX" required />
+          <input id="input-celular" class="input-text" type="tel" placeholder="(XX) XXXXX-XXXX" required />
         </div>
 
         <div class="input-container">
           <label>Data de nascimento:</label>
-          <input class="input-text" type="date" required />
+          <input id="input-dataNascimento" class="input-text" type="date" required />
         </div>
 
         <div class="input-container">
           <label>Senha:</label>
-          <input class="input-text" type="password" placeholder="Digite sua senha" required />
+          <input id="input-senha" class="input-text" type="password" placeholder="Digite sua senha" required />
         </div>
 
         <div class="input-container">
           <label>Confirmar senha:</label>
-          <input class="input-text" type="password" placeholder="Confirme sua senha" required />
+          <input id="input-confirmeSenha" class="input-text" type="password" placeholder="Confirme sua senha" required />
         </div>
 
         <div id="checkbox-container">
@@ -69,7 +69,7 @@
           <label>Li e aceito os termos de uso</label>
         </div>
 
-        <button id="btn-sign" type="submit">Registrar</button>
+        <button id="btn-sign" onclick="mostrarValorDoInput()"  type="submit">Registrar</button>
 
       </form>
     </main>
@@ -81,6 +81,7 @@
 
   </div>
 </body>
+<script src="script.js"></script>
 </html>
 
 
