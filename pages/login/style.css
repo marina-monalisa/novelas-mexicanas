@@ -95,6 +95,13 @@ body {
     flex-direction: column;
 }
 
+.error-msg{
+color:red;
+font-weight:300;
+height: 2rem; 
+display: none;
+}
+
 .input-text {
     margin-top: 0.5rem;
     margin-bottom: 1rem;

@@ -32,44 +32,74 @@
         <p>Preencha os campos abaixo para se cadastrar.</p>
       </div>
 
-      <!-- <form onsubmit="alert('Cadastro enviado')"> -->
+      <form onsubmit="cadastrar(event)">
 
         <div class="input-container">
           <label>Nome completo:</label>
           <input id="input-name" class="input-text" type="text" placeholder="Digite seu nome" required />
+          <span id="error-name" class="error-msg">Nome inválido!</span>
+        </div>
+
+        <div class="input-container">
+          <label>CPF:</label>
+          <input id="input-cpf" class="input-text" type="text" placeholder="000.000.000-00" required />
+          <span id="error-cpf" class="error-msg">CPF inválido!</span>
         </div>
 
         <div class="input-container">
           <label>E-mail:</label>
           <input id="input-email" class="input-text" type="email" placeholder="Digite seu e-mail" required />
+          <span id="error-email" class="error-msg">E-mail inválido!</span>
         </div>
 
         <div class="input-container">
           <label>Celular:</label>
           <input id="input-celular" class="input-text" type="tel" placeholder="(XX) XXXXX-XXXX" required />
+          <span id="error-celular" class="error-msg">Celular inválido!</span>
         </div>
 
-        <div class="input-container">
-          <label>Data de nascimento:</label>
-          <input id="input-dataNascimento" class="input-text" type="date" required />
-        </div>
+        <div class="input-row">
+            <div class="input-container">
+              <label>Data de nascimento:</label>
+              <input
+                id="input-dataNascimento"
+                class="input-text"
+                type="date"
+                required
+              />
+            </div>
+
+            <div class="input-container">
+              <label>Sexo:</label>
+              <select id="input-sexo" class="input-text" required>
+                <option value="">Selecione</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="outro">Outro</option>
+                <option value="naoInformar">Prefiro não informar</option>
+              </select>
+            </div>
+            <span id="error-sexo" class="error-msg">Preencher!</span>
+          </div>
 
         <div class="input-container">
           <label>Senha:</label>
           <input id="input-senha" class="input-text" type="password" placeholder="Digite sua senha" required />
+          <span id="error-senha" class="error-msg">Senha inválida!</span>
         </div>
 
         <div class="input-container">
           <label>Confirmar senha:</label>
           <input id="input-confirmeSenha" class="input-text" type="password" placeholder="Confirme sua senha" required />
+          <span id="error-confirmeSenha" class="error-msg">Senha divergente!</span>
         </div>
 
         <div id="checkbox-container">
-          <input type="checkbox" required />
+          <input id="id-checkbox" type="checkbox" required />
           <label>Li e aceito os termos de uso</label>
         </div>
 
-        <button id="btn-sign" onclick="mostrarValorDoInput()"  type="submit">Registrar</button>
+        <button id="btn-sign" type="submit">Registrar</button>
 
       </form>
     </main>
