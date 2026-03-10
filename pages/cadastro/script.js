@@ -1,6 +1,6 @@
 const checkbox = document.getElementById("id-checkbox");
 const msgErrorSenha = document.getElementById("error-senha");
-
+let erro = false;
 
 function validaCPF(cpf) {
   var Soma = 0;
@@ -15,6 +15,7 @@ function validaCPF(cpf) {
   if (
     [
       "00000000000",
+
       "11111111111",
       "22222222222",
       "33333333333",
@@ -75,54 +76,100 @@ function cadastrar(eventrec) {
 
   //0 || '' --> false => ! => true
   if (!inputName || inputName.length < 3) {
-    msgErrorName.style.display = "block";
+    erro = true;
+    // msgErrorName.style.display = "block";
+    // inputName.style.border = "1px solid red"
   } else {
     msgErrorName.style.display = "none";
   }
 
   if (!validaCPF(inputCPF)) {
+    erro = true;
     msgErrorCPF.style.display = "block";
   } else {
     msgErrorCPF.style.display = "none";
   }
 
   if (!inputEmail || inputEmail.length < 6) {
+    erro = true;
     msgErrorEmail.style.display = "block";
   } else {
     msgErrorEmail.style.display = "none";
   }
 
   if (!inputCelular || inputCelular.length < 10) {
+    erro = true;
     msgErrorCelular.style.display = "block";
   } else {
     msgErrorCelular.style.display = "none";
   }
 
   if (!inputSex) {
+    erro = true;
     msgErrorSexo.style.display = "block";
   } else {
     msgErrorSexo.style.display = "none";
   }
 
-  console.log(!inputSenha || !(inputSenha.length > 8 && inputSenha.length < 100));
-  
-
   if (!inputSenha || !(inputSenha.length >= 8 && inputSenha.length < 100)) {
-      
-      msgErrorSenha.style.display = "block";
+    erro = true;
+    msgErrorSenha.style.display = "block";
   } else {
-      msgErrorSenha.style.display = "none";
+    msgErrorSenha.style.display = "none";
   }
 
   if (!inputConfirmeSenha || inputConfirmeSenha !== inputSenha) {
-      msgErrorConfirmeSenha.style.display = "block";
+    erro = true;
+    msgErrorConfirmeSenha.style.display = "block";
   } else {
-      msgErrorConfirmeSenha.style.display = "none";
+    msgErrorConfirmeSenha.style.display = "none";
+  }
+
+  const checkbox = document.getElementById("id-checkbox");
+
+  if (!checkbox.checked) {
+    alert("Você precisa aceitar os termos de uso");
+    return;
+  }
+
+  console.log(checkbox);
+
+  console.log(
+    inputName,
+    inputCPF,
+    inputEmail,
+    inputCelular,
+    inputDataNascimento,
+    inputSex,
+    inputSenha,
+  );
+
+  if (!erro) {
+    //objeto usuario
+    const cadastroUsuario = {
+      nomeCompleto: inputName,
+      cpf: inputCPF,
+      email: inputEmail,
+      celular: inputCelular,
+      dataDeNascimento: inputDataNascimento,
+      sexo: inputSex,
+      senha: inputSenha,
+    };
+
+    //crio uma lista pra salvar todos os dados
+    let listaCadastrados = [];
+    //pega os dados antigos já cadastrados
+    const dadosCadastrados = JSON.parse(localStorage.getItem("cadastrado"));
+    if (dadosCadastrados) {
+      listaCadastrados = dadosCadastrados;
+    }
+    //adiciona o novo cadastro na lista de cadastros
+    listaCadastrados.push(cadastroUsuario);
+    //adiciona a lista com todos os valores no banco
+    localStorage.setItem("cadastrado", JSON.stringify(listaCadastrados));
+    window.location.href = "../login/index.html";
   }
 }
-
-
-
 
 //endereço
 //   if(inputEndereco || inputEndereco < 6 ){

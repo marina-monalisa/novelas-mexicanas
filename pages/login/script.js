@@ -5,23 +5,25 @@ const inputSenha = document.getElementById("input-senha");
 //FUNCTION
 function login(eventrec){
       event.preventDefault(eventrec)
-      const valorLogin = document.getElementById("input-login").value;
-      const valorSenha = document.getElementById("input-senha").value;
 
-      const LOGIN_VALIDO = "admin@admin.com";
-      const SENHA_VALIDA = '1234';
+    //pego os dados do banco de dados
+    const cadastrados = JSON.parse(localStorage.getItem('cadastrado'));
+    
 
+   //vai buscar o usuario valido no banco de dados dos usuarios cadastrados.
+    const usuarioValido = cadastrados.find((user) => {
+        return user.email === inputLogin.value && user.senha === inputSenha.value;
+    });
 
-      if(valorLogin == LOGIN_VALIDO && valorSenha == SENHA_VALIDA){
-           // window.location.href = "../listagem/index.html";
-            rememberLogin();
-      }else{
-            msgErrorSenha.style.display = "block";
-            inputLogin.style.border = "1px solid red"
-            inputSenha.style.border = "1px solid red"       
-  }
-  }
+    if (usuarioValido) {
 
+        rememberLogin();    
+        alert('Sucesso')    
+        window.location.href = "../listagem/index.html";    
+     } else {
+        document.getElementById("erro-login").textContent = "Usuário ou senha inválidos";
+    }
+}
   //ARROW FUNCTION
   const checkboxRemember = document.querySelector('input[type=checkbox]');
 
@@ -44,10 +46,13 @@ function login(eventrec){
 
   const valorSalvo = JSON.parse(localStorage.getItem("dadosLogin"));
   
-  if(valorSalvo.login && valorSalvo.senha){
+  if(valorSalvo?.login && valorSalvo?.senha){
       inputLogin.value = valorSalvo.login;
       inputSenha.value = valorSalvo.senha
   }
+
+
+
 
   
 
