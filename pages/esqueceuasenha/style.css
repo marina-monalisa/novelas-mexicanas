@@ -1,107 +1,107 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    font-weight: weight;
-    font-style: normal
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: weight;
+  font-style: normal;
 }
 
-
 body {
-    background-color: #4d0a4d;
-    display: flex;
-    justify-content: center;
-    /*alinha horizontalmente*/
-    align-items: center;/*alinha verticalmente*/
-    min-height: 100vh;
+  background-color: #4d0a4d;
+  display: flex;
+  justify-content: center;
+  /*alinha horizontalmente*/
+  align-items: center; /*alinha verticalmente*/
+  min-height: 100vh;
 }
 
 #container {
-    width: 90vw;/*vw medida responsiva, relativa a largura da tela*/
-    height: 90vh;/*vh medida responsiva, relativa a altura da tela*/
-    border-radius: 8px;/*trabalhamos com px pois é a angulação da borda*/
-    background-color: rgb(241 241 241);
-    display: flex;/*define o container como um flexbox*/
-    flex-direction: row;/*alinha os elementos em linha*/
-    padding: 20px;
-
+  width: 90vw; /*vw medida responsiva, relativa a largura da tela*/
+  height: 90vh; /*vh medida responsiva, relativa a altura da tela*/
+  border-radius: 8px; /*trabalhamos com px pois é a angulação da borda*/
+  background-color: rgb(241 241 241);
+  display: flex; /*define o container como um flexbox*/
+  flex-direction: row; /*alinha os elementos em linha*/
+  padding: 20px;
 }
 
 #left-container {
-    flex: 1;/*ocupa todo o espaço disponível*/
-    /*height: 100%; por padrão o height do flexbox é 100% do container pai*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;/*distribui o espaço igualmente entre os itens*/
+  flex: 1; /*ocupa todo o espaço disponível*/
+  /*height: 100%; por padrão o height do flexbox é 100% do container pai*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; /*distribui o espaço igualmente entre os itens*/
 }
 
 #right-container {
-    flex: 1;/*ocupa todo o espaço disponível*/
-    background-image: url(../../assets/mariadobairro.png);/*adiciona a imagem de fundo*/
-    background-size: cover;
-    /*cobre todo o espaço do container*/
-    background-position: center;
-    /*centraliza a imagem*/
-    background-repeat: no-repeat;
-    /*não repete a imagem*/
-    border-radius: 16px;
-    /*trabalhamos com px pois é a angulação da borda*/
-    display:none; /*esconde o container direito*/
+  flex: 1; /*ocupa todo o espaço disponível*/
+  background-image: url(../../assets/mariadobairro.png); /*adiciona a imagem de fundo*/
+  background-size: cover;
+  /*cobre todo o espaço do container*/
+  background-position: center;
+  /*centraliza a imagem*/
+  background-repeat: no-repeat;
+  /*não repete a imagem*/
+  border-radius: 16px;
+  /*trabalhamos com px pois é a angulação da borda*/
+  display: none; /*esconde o container direito*/
 }
 
 #subtitle-login {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-#header-container{
-display: flex;
-align-items: center;
-gap: 4px;
+#header-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 #header-title {
-    font-size: 20px;
+  font-size: 22px;
 }
 
 #subtitle-page {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
-#forgot-text { 
-    margin-bottom: 1rem;
+#forgot-text {
+  margin-bottom: 1rem;
+  font-size: 22px;
 }
 
-.input-container { 
-    display: flex;
-    flex-direction: column;
+.input-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .input-text {
-    margin-top:0.5rem ;
-    margin-bottom: 1rem;
-    height: 2.5rem;
-    border-radius: 4px; /*borda arredondada*/
-    border: 1px solid gray; /*borda cinza*/
-    padding-left: 8px; /*espaçamento interno*/
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  height: 2.5rem;
+  border-radius: 4px; /*borda arredondada*/
+  border: 1px solid gray; /*borda cinza*/
+  padding-left: 8px; /*espaçamento interno*/
 }
 
-main{ /*estiliza o main*/
-    width: 100%;
+main {
+  /*estiliza o main*/
+  width: 100%;
 }
 
 #btn-send {
-    margin-top: 2rem; /*espaçamento superior do botão*/
-    height: 3rem; /*altura do botão*/
-    width: 8rem /*largura do botão*/;
-    border-radius: 8px; /*borda arredondada*/
-    border: solid 1px gray; /*borda cinza*/
-    background-color:rgb(219 58 91); /*cor de fundo do botão*/       
-    color: white; /*cor do texto do botão*/
-    font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
+  margin-top: 2rem; /*espaçamento superior do botão*/
+  height: 3rem; /*altura do botão*/
+  width: 8rem /*largura do botão*/;
+  border-radius: 8px; /*borda arredondada*/
+  border: solid 1px gray; /*borda cinza*/
+  background-color: rgb(219 58 91); /*cor de fundo do botão*/
+  color: white; /*cor do texto do botão*/
+  font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
 }
 
 /* Quando o mouse estiver sobre o botão muda de cor */
@@ -109,32 +109,32 @@ main{ /*estiliza o main*/
   background-color: rgb(180, 40, 70);
 }
 
-#button-container{
-    display: flex;
-    justify-content: center;
+#button-container {
+  display: flex;
+  justify-content: center;
 }
 
 #footer-container {
-    color:rgb(90, 90, 90); /*cor do texto*/
+  color: rgb(90, 90, 90); /*cor do texto*/
 }
 
 #link-container {
-    color:rgb(90, 90, 90); /*cor do link*/
-    cursor: pointer; /*muda o cursor ao passar o mouse*/
-    text-decoration: none; /*remove o sublinhado*/
-    white-space: nowrap; /*impede a quebra de linha*/
-    font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
+  color: rgb(90, 90, 90); /*cor do link*/
+  cursor: pointer; /*muda o cursor ao passar o mouse*/
+  text-decoration: none; /*remove o sublinhado*/
+  white-space: nowrap; /*impede a quebra de linha*/
+  font-weight: 600; /*negrito no texto do botão, não tem px pois o valor é pré-definido*/
 }
 
-#logo-id{
-    width:35px;
-    height:35px;
+#logo-id {
+  width: 35px;
+  height: 35px;
 }
 
-@media (min-width:600px) {#right-container
-     {
-    flex: 1;/*ocupa todo o espaço disponível*/
-    background-image: url(../../assets/mariadobairro.png);/*adiciona a imagem de fundo*/
+@media (min-width: 600px) {
+  #right-container {
+    flex: 1; /*ocupa todo o espaço disponível*/
+    background-image: url(../../assets/mariadobairro.png); /*adiciona a imagem de fundo*/
     background-size: cover;
     /*cobre todo o espaço do container*/
     background-position: center;
@@ -143,33 +143,34 @@ main{ /*estiliza o main*/
     /*não repete a imagem*/
     border-radius: 16px;
     /*trabalhamos com px pois é a angulação da borda*/
-    display:block; /*mostra o container direito*/
-}
+    display: block; /*mostra o container direito*/
+  }
 
-#left-container {
-    flex: 1;/*ocupa todo o espaço disponível*/
+  #left-container {
+    flex: 1; /*ocupa todo o espaço disponível*/
     /*height: 100%; por padrão o height do flexbox é 100% do container pai*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-}
+  }
 
-main{ /*estiliza o main*/
+  main {
+    /*estiliza o main*/
     width: 40%;
-}
+  }
 
-#button-container{
+  #button-container {
     display: flex;
     justify-content: flex-start;
-}
+  }
 
-#logo-id{
-    width:40px;
-    height:40px;
-}
+  #logo-id {
+    width: 40px;
+    height: 40px;
+  }
 
- #header-title {
+  #header-title {
     font-size: 35px;
-}
+  }
 }

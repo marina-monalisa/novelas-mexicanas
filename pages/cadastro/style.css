@@ -23,12 +23,9 @@ body {
 /* CARD PRINCIPAL */
 #container {
   width: 90vw;
-  height: 90vh;
   max-width: 900px;
-
   background-color: rgb(241, 241, 241);
   border-radius: 12px;
-
   padding: 16px;
 
   display: flex;
@@ -87,7 +84,7 @@ main {
   width: 100%;
 }
 
-.input-text {
+.input-text{
   margin-top: 0.3rem;
   margin-bottom: 0.6rem;
 
@@ -164,8 +161,9 @@ display: none;
 .input-row {
   display: flex;
   flex-direction: column; /* celular primeiro */
-  gap: 10px;
+  
 }
+
 
 /* DESKTOP */
 @media (min-width: 768px) {
@@ -173,6 +171,7 @@ display: none;
   #container {
     padding: 6px;
     max-width: 520px;
+    height: 90vh;
   }
 
   #logo-id {
@@ -191,12 +190,15 @@ display: none;
   .input-text {
     height: 2.3rem;
   }
-}
 
-.input-row {
+  .input-row {
     flex-direction: row;
+    gap:10px;
   }
 
   .input-row .input-container {
     flex: 1;
   }
+
+}
+
